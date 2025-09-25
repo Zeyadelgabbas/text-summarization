@@ -23,7 +23,7 @@ list_of_files = [
     "requirements.txt",
     "setup.py",
     "Notebooks/trials.ipynb",
-    "Exception.py",
+    "src/Exception.py",
 
 ]
 

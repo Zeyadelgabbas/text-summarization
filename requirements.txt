@@ -1,0 +1,16 @@
+
+sacrebleu
+rouge_score
+py7zr
+pandas
+nltk
+tqdm
+PyYaml
+matplotlib
+-f https://download.pytorch.org/whl/cu126
+torch
+transformers
+transformers[sentencepiece]
+datasets
+
+#-e .
