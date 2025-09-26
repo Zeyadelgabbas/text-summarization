@@ -12,5 +12,7 @@ torch
 transformers
 transformers[sentencepiece]
 datasets
-
+python-box
+ensure
+hf_xet
 #-e .
