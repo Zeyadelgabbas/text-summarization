@@ -1,1 +1,16 @@
-key : value 
+TrainingParameters:
+    num_train_epochs: 50
+    per_device_train_batch_size: 8
+    per_device_eval_batch_size: 2
+    learning_rate: 0.00001
+    warmup_steps: 200
+    weight_decay: 0.01
+    eval_strategy: "epoch"
+    save_strategy: "epoch"
+    save_total_limit: 3
+    logging_steps: 100
+    eval_steps: 100
+    load_best_model_at_end: True
+    metric_for_best_model: "eval_loss"
+    gradient_accumulation_steps: 2
+   

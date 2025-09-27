@@ -15,4 +15,5 @@ datasets
 python-box
 ensure
 hf_xet
+evaluate
 #-e .
