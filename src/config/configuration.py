@@ -1,6 +1,6 @@
 from src.constants import *
 from src.utils import read_yaml , create_directory
-from src.entity import DataIngestionConfig
+from src.entity import DataIngestionConfig , DataTransformationConfig
 
 class ConfigurationManager:
     def __init__(self,config_filepath = CONFIG_FILE_PATH , params_filepath = PARAMS_FILE_PATH):
@@ -25,3 +25,17 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config
+    
+    def get_data_transformation_config(self):
+        config = self.config.data_transformation
+
+        create_directory([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            data_path = config.data_path,
+            root_dir = config.root_dir, 
+            tokenizer_name=config.tokenizer_name,
+            transformed_path=config.transformed_path
+        )
+
+        return data_transformation_config
