@@ -51,6 +51,7 @@ Kate: Take care!
 Ola: Hello Kate, sorry for not keeping in touch properly. As expected, we have hardly any connectivity here in Cuba. But we're doing fine and enjoying our trip. How are the things at home? Kate: At long last! Started to worry. Nothing new happening, if you disregard all that Xmas craze. Momo has recovered from her injury and frolicking again. Kate: <file_photo> Kate: Good old Momo! Yes, it is your scarf! Ola: NO!!! It's one of my favorites! The one from Laos! Kate: Too late. Get yourself a new one. They surely have nice ones there. Ola and Momo: Not at all. Only cheapish cotton blouses with horrible multi-coloured embroidery or some equally horrible crochetted tops. No shawls or scarfs. Go and get yourself a better one, Kate: Why don't you go to some boutique shop and see if they have a nice one? Ola & Kate: I don't think so. I think you should try and find one at a boutique shop. Not at a market as in your pics? Why would you like one too? Kate: Not really. I might try
 
 **✨ Fine-tuned BART-base Output**
+
 Ola and Momo are in Cuba. Momo is recovering from her injury. Ola will look for a new scarf.
 
 ---
@@ -58,6 +59,7 @@ Ola and Momo are in Cuba. Momo is recovering from her injury. Ola will look for 
 ### 🔍 Example 2  
 
 **📝 Input Dialogue**
+
 Cara: hey
 Cara: are you at home
 Celine: hey Cara
@@ -69,6 +71,7 @@ Celine: ok
 
 
 **✨ Fine-tuned BART-base Output**
+
 Cara will pass by Celine in the evening.
 
 ✅ The fine-tuned model learns to condense conversations into meaningful summaries, while the pretrained model mostly copies the input.  
@@ -78,20 +81,24 @@ Cara will pass by Celine in the evening.
 ## ⚙️ Setup Instructions  
 
 **1️⃣ Clone the Repository**
+
 git clone https://github.com/Zeyadelgabbas/text-summarization.git
 cd text-summarization
 
 **2️⃣ Create Virtual Environment**
+
 python -m venv venv
 source venv/bin/activate # On Linux/Mac
 venv\Scripts\activate # On Windows
 
 **3️⃣ Install Dependencies**
+
 pip install -r requirements.txt
 
 **4️⃣ Download / Train Model**  
 
 To train your own model:
+
 python main.py
 
 To use pretrained fine-tuned model (already trained):
@@ -108,19 +115,22 @@ Open your browser at:
 
 There you can test the /predict endpoint with your own dialogues.
 
-📂 Project Structure
+## 📂 Project Structure
+
 .
-├── src/         # Core package
-│   ├── config/             # Configurations
-│   ├── pipeline/           # Training & prediction pipelines
-│   └── ...
-├── app.py                  # FastAPI server
-├── main.py                 # Training entrypoint
-├── requirements.txt        # Dependencies
-└── README.md               # Project documentation
+├── src/ # Core package
+│ ├── config/ # Configurations
+│ ├── pipeline/ # Training & prediction pipelines
+│ └── ...
+├── app.py # FastAPI server
+├── main.py # Training entrypoint
+├── requirements.txt # Dependencies
+└── README.md # Project documentation
 
-🔮 Future Improvements
-1- Experiment with DistilBART for even faster inference.
-2- Add Gradio UI for easy testing.
-3- Extend to multi-lingual dialogue summarization.
 
+---
+
+## 🔮 Future Improvements
+- Experiment with DistilBART for even faster inference.  
+- Add Gradio UI for easy testing.  
+- Extend to multi-lingual dialogue summarization.  
