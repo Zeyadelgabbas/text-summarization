@@ -43,21 +43,14 @@ Kate: Not really. And Mum would prefer to be the only one with an authentic Cuba
 Ola: OK I'll have a look. Greets to everyone at home pls.
 Kate: Take care!
 
-csharp
-Copy code
 
 **🤖 Pretrained BART-base Output**
 (Often copies large portions of the dialogue without real summarization.)
 Ola: Hello Kate, sorry for not keeping in touch properly. As expected, we have hardly any connectivity here in Cuba. But we're doing fine and enjoying our trip. How are the things at home? Kate: At long last! Started to worry. Nothing new happening, if you disregard all that Xmas craze. Momo has recovered from her injury and frolicking again. Kate: <file_photo> Kate: Good old Momo! Yes, it is your scarf! Ola: NO!!! It's one of my favorites! The one from Laos! Kate: Too late. Get yourself a new one. They surely have nice ones there. Ola and Momo: Not at all. Only cheapish cotton blouses with horrible multi-coloured embroidery or some equally horrible crochetted tops. No shawls or scarfs. Go and get yourself a better one, Kate: Why don't you go to some boutique shop and see if they have a nice one? Ola & Kate: I don't think so. I think you should try and find one at a boutique shop. Not at a market as in your pics? Why would you like one too? Kate: Not really. I might try
 
-csharp
-Copy code
 
 **✨ Fine-tuned BART-base Output**
 Ola and Momo are in Cuba. Momo is recovering from her injury. Ola will look for a new scarf.
-
-yaml
-Copy code
 
 ---
 
@@ -73,14 +66,8 @@ Celine: im sorry, i can drop by in the evening if you dont mind
 Cara: its fine, call me then if you decide to come
 Celine: ok
 
-csharp
-Copy code
-
 **✨ Fine-tuned BART-base Output**
 Cara will pass by Celine in the evening.
-
-yaml
-Copy code
 
 ✅ The fine-tuned model learns to condense conversations into meaningful summaries, while the pretrained model mostly copies the input.  
 
@@ -92,30 +79,17 @@ Copy code
 git clone https://github.com/Zeyadelgabbas/text-summarization.git
 cd text-summarization
 
-markdown
-Copy code
-
 **2️⃣ Create Virtual Environment**
 python -m venv venv
 source venv/bin/activate # On Linux/Mac
 venv\Scripts\activate # On Windows
 
-markdown
-Copy code
-
 **3️⃣ Install Dependencies**
 pip install -r requirements.txt
 
-css
-Copy code
-
 **4️⃣ Download / Train Model**  
-
 To train your own model:
 python main.py
-
-pgsql
-Copy code
 
 To use pretrained fine-tuned model (already trained):
 ```python
@@ -126,8 +100,6 @@ summary = pipeline.predict("Your dialogue text here...")
 print(summary)
 5️⃣ Run FastAPI Server
 
-nginx
-Copy code
 uvicorn app:app --host 0.0.0.0 --port 8080
 Open your browser at:
 👉 http://127.0.0.1:8080/docs
@@ -135,8 +107,6 @@ Open your browser at:
 There you can test the /predict endpoint with your own dialogues.
 
 📂 Project Structure
-bash
-Copy code
 .
 ├── src/         # Core package
 │   ├── config/             # Configurations
