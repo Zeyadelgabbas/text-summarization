@@ -16,4 +16,6 @@ python-box
 ensure
 hf_xet
 evaluate
+fastapi
+uvicorn
 #-e .

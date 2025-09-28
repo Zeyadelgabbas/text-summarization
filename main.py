@@ -17,11 +17,11 @@ try:
     data_transformation.main()
     logging.info("Tokenization Pipeline finished")
 
-"""
-    model_train = ModelTrainerPipeline()
-    model_train.train()
-    logging.info("Training pipeline finshed")
-"""
+
+    #model_train = ModelTrainerPipeline()
+    #model_train.train()
+    #logging.info("Training pipeline finshed")
+
     model_evaluate = ModelEvaluationPipeline()
     model_evaluate.evaluate()
     logging.info("Evaluation pipeline finished")

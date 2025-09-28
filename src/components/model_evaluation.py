@@ -3,7 +3,7 @@ from transformers import AutoTokenizer , AutoModelForSeq2SeqLM
 import evaluate
 from datasets import load_from_disk
 from src.entity import ModelEvaluationConfig
-import tqdm
+from tqdm import tqdm
 import torch
 import pandas as pd
 
@@ -39,7 +39,7 @@ class ModelEvaluation:
             decoded_summary = [tokenizer.decode(s, skip_special_tokens=True, 
                                       clean_up_tokenization_spaces=True) 
                      for s in summary]      
-            decoded_summary = [d.replace("", " ") for d in decoded_summary]
+            #decoded_summary = [d.replace("", " ") for d in decoded_summary]
 
             metric.add_batch(predictions=decoded_summary, references=target_batch)
         
