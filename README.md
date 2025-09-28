@@ -25,9 +25,10 @@ FastAPI inference server with /predict endpoint.
 Comparison of fine-tuned vs pretrained results.
 
 📊 Results Comparison
-Example 1
 
-Input Dialogue
+🔍 Example 1:
+
+📝 Input Dialogue
 
 Ola: Hello Kate, sorry for not keeping in touch properly. As expected, we have hardly any connectivity here in Cuba. But we're doing fine and enjoying our trip. How are the things at home?
 Kate: At long last! Started to worry. Nothing new happening, if you disregard all that Xmas craze. Momo has recovered from her injury and frolicking again.
@@ -48,19 +49,19 @@ Ola: OK I'll have a look. Greets to everyone at home pls.
 Kate: Take care!
 
 
-Pretrained BART-base Output
+🤖 Pretrained BART-base Output
 
 (Often copies large portions of the dialogue without real summarization.)
 Ola: Hello Kate, sorry for not keeping in touch properly. As expected, we have hardly any connectivity here in Cuba. But we're doing fine and enjoying our trip. How are the things at home? Kate: At long last! Started to worry. Nothing new happening, if you disregard all that Xmas craze. Momo has recovered from her injury and frolicking again. Kate: <file_photo> Kate: Good old Momo! Yes, it is your scarf! Ola: NO!!! It's one of my favorites! The one from Laos! Kate: Too late. Get yourself a new one. They surely have nice ones there. Ola and Momo: Not at all. Only cheapish cotton blouses with horrible multi-coloured embroidery or some equally horrible crochetted tops. No shawls or scarfs. Go and get yourself a better one, Kate: Why don't you go to some boutique shop and see if they have a nice one? Ola & Kate: I don't think so. I think you should try and find one at a boutique shop. Not at a market as in your pics? Why would you like one too?Kate: Not really. I might try
 
 
-Fine-tuned BART-base Output
+✨ Fine-tuned BART-base Output
 
 "Ola and Momo are in Cuba. Momo is recovering from her injury. Ola will look for a new scarf."
 
-Example 2
+🔍 Example 2
 
-Input Dialogue
+📝 Input Dialogue
 
 Cara: hey
 Cara: are you at home
@@ -72,7 +73,7 @@ Cara: its fine, call me then if you decide to come
 Celine: ok
 
 
-Fine-tuned Output
+✨ Fine-tuned BART-base Output
 
 "Cara will pass by Celine in the evening."
 
