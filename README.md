@@ -103,9 +103,9 @@ python main.py
 
 To use pretrained fine-tuned model (already trained):
 ```python
-from textSummarizer.pipeline.prediction import PredictionPipeline
+from src.pipeline.prediction import PredictPipeline
 
-pipeline = PredictionPipeline()
+pipeline = PredictPipeline()
 summary = pipeline.predict("Your dialogue text here...")
 print(summary)
 5️⃣ Run FastAPI Server
